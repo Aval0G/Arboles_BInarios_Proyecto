@@ -6,7 +6,7 @@ import { Menu, opcionesArbolBinario } from './menu_de_prueba.mjs';
  * @param {string} caracter - Caracter que puede ser un signo de operacion o un digito
  * @param {Nodo} hiIzq - Hijo izquierdo de un nodo
  * @param {Nodo} hiDer - Hijo derecho de un nodo
- * @description La clase tiene un caracter siempre, pero puede tener uno o dos hijos
+ * @description La clase tiene un caracter siempre, pero puede no tener o tener uno o dos hijos
 */
 class Nodo {
   constructor (caracter) {
