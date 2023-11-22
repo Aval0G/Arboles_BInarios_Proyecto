@@ -1,8 +1,10 @@
-![Portada](https://www.conocetusdatos.com/wp-content/uploads/2019/12/bases-de-datos-scaled.jpg)
- ## Proyecto Final #
- **Aldo Valdez Gutierrez**
+![Portada](https://i1.wp.com/wokii.com/wp-content/uploads/2020/09/tienes-fotografias-de-arboles_-entonces-registrate-a-este-concurso-y-gana-hasta-60-mil-pesos.jpg)
 
-*3ra parcial*
+## Proyecto Final
+
+**Aldo Valdez Gutierrez**
+
+_3ra parcial_
 
 #### Materia
 
