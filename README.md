@@ -9,4 +9,5 @@ _3ra parcial_
 #### Información
 
 **Materia: Estructura base de datos**
+
 **Tema: Arboles binarios**
