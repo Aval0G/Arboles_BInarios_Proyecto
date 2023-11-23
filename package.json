@@ -5,7 +5,8 @@
   "main": "Arbol Binario.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +16,11 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "jsdoc": "^4.0.2"
   },
   "dependencies": {
+    "jsdoc": "^4.0.2",
     "readline-sync": "^1.4.10"
   }
 }
