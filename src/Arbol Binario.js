@@ -96,15 +96,6 @@ class ArbolBinario {
     this.arbol = pila.pop();
   }
 
-  dibujarArbol (nodo, nivel = 0) {
-    if (nodo === null) {
-      return;
-    }
-    this.dibujarArbol(nodo.hiDer, nivel + 1);
-    console.log(' '.repeat(nivel * 4) + nodo.caracter);
-    this.dibujarArbol(nodo.hiIzq, nivel + 1);
-  }
-
   /**
    * Funcion para construir el arbol desde postorder
    * @param {string} postorder - Expresion en Postorder
@@ -254,6 +245,29 @@ class ArbolBinario {
     this.construirArbolDesdeInorder(inorder);
     return this.recorridoPostorder(this.arbol);
   }
+
+    /**
+   * Funcion para dibujar el arbol en consola
+   * @param {*} nodo donde se empieza a dibujar el arbol
+   * @param {*} espacio que se deja entre cada nodo
+   * @returns el arbol dibujado en consola
+   */
+    imprimirArbol(nodo, nivel = 0) {
+      if (!nodo) {
+        return;
+      }
+    
+      if (nodo.hiDer) {
+        this.imprimirArbol(nodo.hiDer, nivel + 1);
+      }
+    
+      console.log(" ".repeat(nivel * 4) + nodo.caracter);
+    
+      if (nodo.hiIzq) {
+        this.imprimirArbol(nodo.hiIzq, nivel + 1);
+      }
+    }
+    
 }
 
 // Inicio del menu
@@ -320,7 +334,8 @@ class App {
     this.expresion = (readString('Ingrese la expresion en Inorder: '));
     if (this.expresion !== '') {
       this.arbol.construirArbolDesdeInorder(this.expresion);
-      this.arbol.dibujarArbol(this.arbol.arbol);
+      console.log('Arbol construido desde Inorder');
+      this.arbol.imprimirArbol(this.arbol.arbol);
       console.log('Expresion convertida en Preorder', this.arbol.obtenerPreorderDesdeInorder(this.expresion));
       console.log('Expresion convertida en PostOrder', this.arbol.obtenerPostorderDesdeInorder(this.expresion));
       console.log('Resultado:', this.arbol.resolver());
@@ -341,6 +356,8 @@ class App {
     this.expresion = readString('Ingrese la expresion en Preorder: ');
     if (this.expresion !== '') {
       this.arbol.construirArbolDesdePreorder(this.expresion);
+      console.log('Arbol construido desde Preorder');
+      this.arbol.imprimirArbol(this.arbol.arbol);
       console.log('Resultado:', this.arbol.resolver());
       readString('Presione enter para continuar');
     } else {
@@ -359,6 +376,8 @@ class App {
     this.expresion = readString('Ingrese la expresion en Postorder: ');
     if (this.expresion !== '') {
       this.arbol.construirArbolDesdePostorder(this.expresion);
+      console.log('Arbol construido desde Postorder');
+      this.arbol.imprimirArbol(this.arbol.arbol);
       console.log('Resultado:', this.arbol.resolver());
       readString('Presione enter para continuar');
     } else {
@@ -376,3 +395,9 @@ const ArbolBinarioApp = new App();
  * Inicio de la aplicacion
  */
 ArbolBinarioApp.start();
+
+//Expresiom normal 6+8/2*5−4
+//Expresion convertida en Preorder -+6*/8254 
+/*Expresion convertida en PostOrder 682/5*+4-
+Resultado: 22
+*/

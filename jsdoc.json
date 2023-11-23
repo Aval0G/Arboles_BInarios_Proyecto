@@ -3,7 +3,7 @@
         "include":[
             "src"
         ],
-        "includePattern":".+\\.js(doc|x)?$",
+        "includePattern":".+\\.(js|jsx|mjs)(doc|x)?$",
         "excludePattern":"node_modules/|docs"
     },
     "plugins":[],
